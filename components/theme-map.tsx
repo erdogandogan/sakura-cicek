@@ -16,7 +16,7 @@ export default function ThemeMap({ className = "" }: ThemeMapProps) {
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
         className="h-full w-full grayscale-[15%] sepia-[12%] saturate-[1.05] contrast-[0.97]"
-        style={{ border: 0, minHeight: 320 }}
+        style={{ border: 0 }}
       />
     </div>
   );

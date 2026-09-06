@@ -48,7 +48,7 @@ export default function Nav() {
         <div className="hidden items-center gap-3 lg:flex">
           <a
             href={shopInfo.phoneLink}
-            className="mr-2 inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-accent-text"
+            className="mr-2 hidden items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-accent-text xl:inline-flex"
           >
             <Phone size={16} />
             {shopInfo.phone}

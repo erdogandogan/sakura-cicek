@@ -78,11 +78,22 @@ tasarımla eklenmeli — her yerde ayrı ayrı stil yazma.
       yorumları eklemek için metinlerini bana iletmeniz gerekiyor.)
 
 ## Faz 5 — Mobil Optimizasyon (TÜM DİĞER FAZLAR BİTTİKTEN SONRA yapılacak, kritik)
-- [ ] Projeyi iPhone 16 genişliğinde (390px) her sayfada test et, düzensiz duran 
+- [!] Projeyi iPhone 16 genişliğinde (390px) her sayfada test et, düzensiz duran 
       tüm bölümleri düzelt. Kullanıcıların neredeyse tamamı mobilden girecek, 
       bu yüzden bu faz atlanamaz.
-- [ ] Her yeni eklenen bölümü (Instagram butonları, Google Maps, yorumlar, 
+      (Bu ortamda tarayıcı/ekran görüntüsü aracı yok, bu yüzden 390px'te gerçek
+      görsel test YAPILAMADI. Bunun yerine tum sayfa ve bilesenlerin responsive
+      class'lari satir satir denetlendi: header'da masaustu-mobil sinirinda
+      (1024px) sikisma riski bulundu ve telefon numarasi metni xl: breakpoint'ine
+      ertelenerek duzeltildi; theme-map.tsx'te aspect-ratio ile catisan sabit
+      minHeight kaldirildi. Diger tum yeni bolumlerde (collage grid, hours-status,
+      infinite-moving-cards, hero/CTA buton satirlari) tasma riski tasiyan sabit
+      genislik/pozisyon bulunmadi. Kullanicinin gercek cihazda/tarayicida son
+      bir goz atmasi onerilir.)
+- [x] Her yeni eklenen bölümü (Instagram butonları, Google Maps, yorumlar, 
       öne çıkan ürünler yeni tasarımı, yeni "nasıl hazırlanır" bölümü) ayrı ayrı 
       mobilde kontrol et.
-- [ ] Dokunma hedeflerinin (butonlar) mobilde rahat tıklanabilir boyutta olduğunu doğrula.
-- [ ] npm run build ile hata olmadığını son kez doğrula.
+      (Kod bazlı denetim yapıldı, yukarıdaki nota bakınız.)
+- [x] Dokunma hedeflerinin (butonlar) mobilde rahat tıklanabilir boyutta olduğunu doğrula.
+      (Tüm buton bileşenleri min-h-11/h-11 w-11 (44px) standardını kullanıyor.)
+- [x] npm run build ile hata olmadığını son kez doğrula.
