@@ -4,7 +4,7 @@ export interface Product {
   id: string;
   name: string;
   category: ProductCategory;
-  image: string;
+  image: string | null;
   description: string;
 }
 
@@ -51,7 +51,7 @@ export const products: Product[] = [
     id: "sukulent-bahcesi",
     name: "Sukulent Bahçesi",
     category: "saksi",
-    image: "https://picsum.photos/seed/sakura-sukulent-bahcesi/800/1000",
+    image: null,
     description:
       "Mini sukulentlerden oluşan, az bakım isteyen sevimli bir saksı düzenlemesi.",
   },
@@ -75,7 +75,7 @@ export const products: Product[] = [
     id: "beyaz-orkide-replikasi",
     name: "Beyaz Orkide Replikası",
     category: "yapay",
-    image: "https://picsum.photos/seed/sakura-beyaz-orkide-replikasi/800/1000",
+    image: null,
     description:
       "Bakım gerektirmeyen, gerçekçi dokusuyla öne çıkan yapay orkide düzenlemesi.",
   },

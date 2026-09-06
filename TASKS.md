@@ -30,18 +30,24 @@ Not: Bu bölümdeki tüm Instagram/WhatsApp butonları aynı shared component
 tasarımla eklenmeli — her yerde ayrı ayrı stil yazma.
 
 ## Faz 3 — Görsel/Layout Düzeltmeleri (görsel gerektirir)
-- [ ] Hakkımızda: "Nasıl başladık" yazısının yanındaki görselin boyutunu büyüt ve 
+- [x] Hakkımızda: "Nasıl başladık" yazısının yanındaki görselin boyutunu büyüt ve 
       düzelt (mevcut oranı/kırpmayı kontrol et).
-- [ ] Hakkımızda: "Atölye felsefemiz" yazısının yanına da bir görsel ekle 
+      (EditorialSplit'e imageAspect/emphasizeImage prop'ları eklendi; bu bölüm
+      3:4 portre kırpma ve daha geniş görsel kolonu kullanıyor.)
+- [x] Hakkımızda: "Atölye felsefemiz" yazısının yanına da bir görsel ekle 
       (henüz gerçek görsel yoksa uygun bir placeholder/AI-generated atölye 
       atmosferi görseli kullan, sonra değiştirilecek).
-- [ ] Ana sayfa: "Öne çıkan ürünler" bölümünün tasarımını, 
+      (Bu bölümde zaten mimoza-anthurium-saksi.jpg görseli mevcuttu, ek işlem gerekmedi.)
+- [x] Ana sayfa: "Öne çıkan ürünler" bölümünün tasarımını, 
       /public/reference/one_cikarilanlar.png dosyasındaki (bu dosyayı önce 
       projeye kopyala) tasarıma uyarla. Mevcut renk/tipografi sistemini koru, 
       sadece kart/layout yapısını referans görsele göre güncelle.
-- [ ] Ürünler sayfası: fotoğrafı olmayan ürünleri tespit et ve listele. Gerçek 
+- [x] Ürünler sayfası: fotoğrafı olmayan ürünleri tespit et ve listele. Gerçek 
       fotoğraf gelene kadar tutarlı bir placeholder (örn. kategoriye uygun 
       nötr bir görsel) kullan — kırık görsel ikonu görünmesin.
+      (Tespit edilenler: "Sukulent Bahçesi" ve "Beyaz Orkide Replikası" —
+      ikisi de eskiden picsum.photos rastgele görseli kullanıyordu, artık
+      ikon + "Görsel yakında" placeholder'ı gösteriliyor.)
 
 ## Faz 4 — Dış Kaynak Entegrasyonları (yüksek risk, sırayla ve tek tek)
 - [ ] Google Maps konumunu iframe embed ile ekle (basit embed, API key gerekmez), 

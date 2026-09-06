@@ -29,6 +29,8 @@ export default function HakkimizdaPage() {
         alt="Sakura Çiçek Atölyesi'nden pembe ve mor tonlarında bir aranjman"
         heading="Nasıl Başladık"
         body="Talas'ta küçük bir dükkanla açtığımız Sakura Çiçek Atölyesi, komşularımızın günlük çiçek ihtiyacından doğdu. Zamanla mahallenin özel günlerinde akla gelen ilk adres olduk."
+        imageAspect="aspect-[3/4]"
+        emphasizeImage
       />
 
       <EditorialSplit
