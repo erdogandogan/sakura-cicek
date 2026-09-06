@@ -60,7 +60,7 @@ export default function AtelierGallery() {
             key={photo.src}
             delay={i * 0.05}
             className={`relative overflow-hidden rounded-panel ${
-              photo.tall ? "row-span-2 aspect-[4/5]" : "aspect-square"
+              photo.tall ? "row-span-2" : "aspect-square"
             }`}
           >
             <Image

@@ -78,22 +78,25 @@ tasarımla eklenmeli — her yerde ayrı ayrı stil yazma.
       yorumları eklemek için metinlerini bana iletmeniz gerekiyor.)
 
 ## Faz 5 — Mobil Optimizasyon (TÜM DİĞER FAZLAR BİTTİKTEN SONRA yapılacak, kritik)
-- [!] Projeyi iPhone 16 genişliğinde (390px) her sayfada test et, düzensiz duran 
+- [x] Projeyi iPhone 16 genişliğinde (390px) her sayfada test et, düzensiz duran 
       tüm bölümleri düzelt. Kullanıcıların neredeyse tamamı mobilden girecek, 
       bu yüzden bu faz atlanamaz.
-      (Bu ortamda tarayıcı/ekran görüntüsü aracı yok, bu yüzden 390px'te gerçek
-      görsel test YAPILAMADI. Bunun yerine tum sayfa ve bilesenlerin responsive
-      class'lari satir satir denetlendi: header'da masaustu-mobil sinirinda
-      (1024px) sikisma riski bulundu ve telefon numarasi metni xl: breakpoint'ine
-      ertelenerek duzeltildi; theme-map.tsx'te aspect-ratio ile catisan sabit
-      minHeight kaldirildi. Diger tum yeni bolumlerde (collage grid, hours-status,
-      infinite-moving-cards, hero/CTA buton satirlari) tasma riski tasiyan sabit
-      genislik/pozisyon bulunmadi. Kullanicinin gercek cihazda/tarayicida son
-      bir goz atmasi onerilir.)
+      (GÜNCELLEME: Playwright + Chromium kurulup gerçek 390px görüntülemede tüm
+      sayfalar taranarak ekran görüntüsü alındı. İki gerçek hata bulundu ve
+      düzeltildi: (1) atelier-gallery.tsx'teki mozaik gridde "tall" fotoğraflara
+      hem row-span-2 hem sabit aspect-[4/5] birden verilmişti, bu ikisi çakışıp
+      sütun 1'de büyük boş alan bırakıyordu — sabit aspect kaldırılıp öğenin
+      grid hücresini doğal olarak doldurması sağlandı. (2) testimonial.tsx'teki
+      yeni infinite-moving-cards carousel'i tek yorumla (Faz 4'te belirtilen
+      sebeple) mobilde yarım/boş görünüyordu — 3'ten az yorum varken bileşen
+      otomatik olarak eski sade tek-alıntı tasarımına düşecek şekilde
+      güncellendi. Ayrıca önceki kod denetiminde bulunan header sıkışması ve
+      theme-map aspect-ratio çakışması da doğrulanmış oldu. Diğer tüm
+      sayfalarda/bölümlerde taşma veya bozukluk görülmedi.)
 - [x] Her yeni eklenen bölümü (Instagram butonları, Google Maps, yorumlar, 
       öne çıkan ürünler yeni tasarımı, yeni "nasıl hazırlanır" bölümü) ayrı ayrı 
       mobilde kontrol et.
-      (Kod bazlı denetim yapıldı, yukarıdaki nota bakınız.)
+      (Playwright ile gerçek ekran görüntüleri alınarak tek tek doğrulandı.)
 - [x] Dokunma hedeflerinin (butonlar) mobilde rahat tıklanabilir boyutta olduğunu doğrula.
       (Tüm buton bileşenleri min-h-11/h-11 w-11 (44px) standardını kullanıyor.)
 - [x] npm run build ile hata olmadığını son kez doğrula.
