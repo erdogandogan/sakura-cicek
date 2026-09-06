@@ -1,4 +1,5 @@
 import WhatsAppButton from "@/components/whatsapp-button";
+import InstagramButton from "@/components/instagram-button";
 import { Reveal } from "@/components/reveal";
 
 export default function ClosingCta() {
@@ -11,7 +12,10 @@ export default function ClosingCta() {
         <p className="max-w-md text-accent-foreground/85">
           Aklındaki çiçeği anlat, birlikte en uygun buketi seçelim.
         </p>
-        <WhatsAppButton label="WhatsApp'tan Yaz" variant="onAccent" />
+        <div className="flex flex-wrap items-center justify-center gap-3">
+          <WhatsAppButton label="WhatsApp'tan Yaz" variant="onAccent" />
+          <InstagramButton variant="onAccent" />
+        </div>
       </Reveal>
     </section>
   );

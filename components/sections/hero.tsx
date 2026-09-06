@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import WhatsAppButton from "@/components/whatsapp-button";
+import InstagramButton from "@/components/instagram-button";
 import { Reveal } from "@/components/reveal";
 
 export default function Hero() {
@@ -16,6 +17,7 @@ export default function Hero() {
         </p>
         <div className="flex flex-wrap gap-3">
           <WhatsAppButton label="WhatsApp'tan Yaz" />
+          <InstagramButton />
           <Link
             href="/urunler"
             className="inline-flex min-h-11 items-center justify-center rounded-full border border-border px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-accent-text hover:text-accent-text"

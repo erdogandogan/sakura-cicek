@@ -15,13 +15,14 @@
       yardımcı olduğunu vurgula. Mevcut tasarım diline uygun bir layout kullan.
 
 ## Faz 2 — Instagram/WhatsApp Buton Eklemeleri (düşük-orta risk)
-- [ ] Header: WhatsApp'tan Yaz butonunun yanına Instagram adresi ve konum butonlarını ekle.
-- [ ] Hero bölümü: WhatsApp'tan Yaz butonunun yanına Instagram butonu ekle.
-- [ ] Ana sayfa kapanış CTA'sı ("Bugün Bir Buket Hazırlayalım mı?"): Instagram adresini de ekle.
-- [ ] Hakkımızda sayfası kapanış CTA'sı (aynı metin): Instagram adresini de ekle.
-- [ ] İletişim sayfası: WhatsApp'tan Yaz butonunun tasarımını, altındaki Instagram 
+- [x] Header: WhatsApp'tan Yaz butonunun yanına Instagram adresi ve konum butonlarını ekle.
+- [x] Hero bölümü: WhatsApp'tan Yaz butonunun yanına Instagram butonu ekle.
+- [x] Ana sayfa kapanış CTA'sı ("Bugün Bir Buket Hazırlayalım mı?"): Instagram adresini de ekle.
+- [x] Hakkımızda sayfası kapanış CTA'sı (aynı metin): Instagram adresini de ekle.
+      (Not: ClosingCta ortak bileşen olduğu için tek değişiklik her iki sayfayı da kapsadı.)
+- [x] İletişim sayfası: WhatsApp'tan Yaz butonunun tasarımını, altındaki Instagram 
       butonuyla aynı stile getir (tutarlı görünüm).
-- [ ] İletişim sayfası: "Sorularınız ve siparişleriniz için bize WhatsApp üzerinden 
+- [x] İletişim sayfası: "Sorularınız ve siparişleriniz için bize WhatsApp üzerinden 
       ulaşabilir, atölyemizi Talas'ta ziyaret edebilirsiniz." cümlesine Instagram'ı da ekle.
 
 Not: Bu bölümdeki tüm Instagram/WhatsApp butonları aynı shared component 

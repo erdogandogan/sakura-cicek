@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { InstagramLogo, MapPin, Phone, Clock } from "@phosphor-icons/react/dist/ssr";
+import { MapPin, Phone, Clock } from "@phosphor-icons/react/dist/ssr";
 import WhatsAppButton from "@/components/whatsapp-button";
+import InstagramButton from "@/components/instagram-button";
 import { Reveal } from "@/components/reveal";
 import { shopInfo } from "@/lib/shop-info";
 import HoursStatus from "@/components/hours-status";
@@ -21,23 +22,17 @@ export default function IletisimPage() {
         </h1>
         <p className="mt-4 text-base leading-relaxed text-muted-foreground">
           Sorularınız ve siparişleriniz için bize WhatsApp üzerinden
-          ulaşabilir, atölyemizi Talas&apos;ta ziyaret edebilirsiniz.
+          ulaşabilir, Instagram&apos;dan takip edebilir, atölyemizi
+          Talas&apos;ta ziyaret edebilirsiniz.
         </p>
       </Reveal>
 
       <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-12 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8 lg:py-16">
         <Reveal className="flex flex-col items-start gap-6">
-          <WhatsAppButton label="WhatsApp'tan Yaz" />
-
-          <a
-            href={shopInfo.instagramUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-foreground hover:text-accent-text"
-          >
-            <InstagramLogo size={20} />
-            {shopInfo.instagramHandle}
-          </a>
+          <div className="flex flex-wrap gap-3">
+            <WhatsAppButton label="WhatsApp'tan Yaz" />
+            <InstagramButton label={shopInfo.instagramHandle} />
+          </div>
 
           <a
             href={shopInfo.mapUrl}

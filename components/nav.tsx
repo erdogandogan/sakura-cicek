@@ -3,8 +3,10 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { List, Phone, X } from "@phosphor-icons/react/dist/ssr";
+import { List, MapPin, Phone, X } from "@phosphor-icons/react/dist/ssr";
 import WhatsAppButton from "@/components/whatsapp-button";
+import InstagramButton from "@/components/instagram-button";
+import IconLinkButton from "@/components/icon-link-button";
 import { shopInfo } from "@/lib/shop-info";
 
 const links = [
@@ -43,15 +45,22 @@ export default function Nav() {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-5 lg:flex">
+        <div className="hidden items-center gap-3 lg:flex">
           <a
             href={shopInfo.phoneLink}
-            className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-accent-text"
+            className="mr-2 inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-accent-text"
           >
             <Phone size={16} />
             {shopInfo.phone}
           </a>
-          <WhatsAppButton label="WhatsApp'tan Yaz" />
+          <InstagramButton iconOnly label={shopInfo.instagramHandle} />
+          <IconLinkButton
+            href={shopInfo.mapUrl}
+            label="Konum"
+            icon={MapPin}
+            iconOnly
+          />
+          <WhatsAppButton label="WhatsApp'tan Yaz" className="ml-1" />
         </div>
 
         <button
@@ -89,6 +98,15 @@ export default function Nav() {
             <Phone size={16} />
             {shopInfo.phone}
           </a>
+          <div className="mt-3 flex gap-3">
+            <InstagramButton className="flex-1" />
+            <IconLinkButton
+              href={shopInfo.mapUrl}
+              label="Konum"
+              icon={MapPin}
+              className="flex-1"
+            />
+          </div>
           <WhatsAppButton label="WhatsApp'tan Yaz" className="mt-3 w-full" />
         </div>
       )}
