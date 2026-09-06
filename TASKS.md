@@ -50,15 +50,32 @@ tasarımla eklenmeli — her yerde ayrı ayrı stil yazma.
       ikon + "Görsel yakında" placeholder'ı gösteriliyor.)
 
 ## Faz 4 — Dış Kaynak Entegrasyonları (yüksek risk, sırayla ve tek tek)
-- [ ] Google Maps konumunu iframe embed ile ekle (basit embed, API key gerekmez), 
+- [x] Google Maps konumunu iframe embed ile ekle (basit embed, API key gerekmez), 
       site temasına uygun kart/çerçeve ile.
-- [ ] Instagram görsellerinin çözünürlüğünü kontrol et — Instagram kaynaklı görsel 
+      (components/theme-map.tsx — İletişim sayfasına "Konum" bölümü olarak eklendi,
+      hafif sepia/grayscale filtresiyle site paletine yakınlaştırıldı.)
+- [x] Instagram görsellerinin çözünürlüğünü kontrol et — Instagram kaynaklı görsel 
       sıkıştırması teknik bir sınırdır, tekrar scrape ETME; orijinal dosyalar için 
       /public/images/products/ klasör yapısını hazırla.
-- [ ] Müşteri yorumları component'i (infinite-moving-cards) kur ve temaya uyarla. 
+      (Düşük çözünürlüklü dosyalar tekrar kontrol edildi: aranjman-balon-pembe.webp,
+      aranjman-krem-altin-vazo.jpg, aranjman-lavanta-mor.jpg, buket-pembe-bordo.jpg,
+      buket-pembe-gul.webp — hepsi diğerlerinden belirgin küçük (45-62KB vs 380-580KB).
+      aranjman-gumus-kase.jpg hiçbir yerde kullanılmıyor (yetim dosya). Tekrar scrape
+      yapılmadı; public/images/products/{buket,saksi,yapay}/ klasörleri orijinal
+      dosyalar için hazırlandı.)
+- [!] Müşteri yorumları component'i (infinite-moving-cards) kur ve temaya uyarla. 
       Google Maps yorumlarını OTOMATİK scrape etmeye çalışma — sadece metin 
       yorumlarını oku ve bana listele, fotoğraflı olanları BELİRT ama indirme; 
       fotoğrafları ben manuel ekleyeceğim.
+      (component kısmı TAMAMLANDI: components/ui/infinite-moving-cards.tsx
+      oluşturuldu — framer-motion yerine projenin mevcut "motion" bağımlılığı ve
+      tasarım tokenları kullanılarak; ana sayfadaki Testimonial bölümüne bağlandı.
+      ANCAK metin yorumlarını okuma kısmı BAŞARISIZ: Google Maps yorum/işletme
+      sayfası WebFetch ile denendi (hem kısa link hem çözümlenmiş kanonik URL),
+      sayfa JS ile render edildiğinden içerik boş dönüyor — bu bir dış kaynağa
+      erişim sorunu, otomatik scrape değil. Şu an carousel'de sitede zaten var
+      olan tek yer tutucu yorum (data/testimonials.ts) kullanılıyor. Gerçek
+      yorumları eklemek için metinlerini bana iletmeniz gerekiyor.)
 
 ## Faz 5 — Mobil Optimizasyon (TÜM DİĞER FAZLAR BİTTİKTEN SONRA yapılacak, kritik)
 - [ ] Projeyi iPhone 16 genişliğinde (390px) her sayfada test et, düzensiz duran 

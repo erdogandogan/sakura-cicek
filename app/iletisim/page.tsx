@@ -6,6 +6,7 @@ import InstagramButton from "@/components/instagram-button";
 import { Reveal } from "@/components/reveal";
 import { shopInfo } from "@/lib/shop-info";
 import HoursStatus from "@/components/hours-status";
+import ThemeMap from "@/components/theme-map";
 
 export const metadata: Metadata = {
   title: "İletişim | Sakura Çiçek Atölyesi",
@@ -67,16 +68,28 @@ export default function IletisimPage() {
         </Reveal>
       </div>
 
-      <section className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
-        <div className="flex items-center gap-2">
-          <Clock size={20} className="text-accent-secondary" />
-          <h2 className="font-display text-xl font-semibold text-foreground">
-            Çalışma Saatleri
-          </h2>
-        </div>
-        <div className="mt-4">
-          <HoursStatus />
-        </div>
+      <section className="mx-auto grid max-w-7xl gap-10 px-4 pb-16 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8">
+        <Reveal>
+          <div className="flex items-center gap-2">
+            <MapPin size={20} className="text-accent-secondary" />
+            <h2 className="font-display text-xl font-semibold text-foreground">
+              Konum
+            </h2>
+          </div>
+          <ThemeMap className="mt-4 aspect-[4/3] w-full" />
+        </Reveal>
+
+        <Reveal delay={0.1}>
+          <div className="flex items-center gap-2">
+            <Clock size={20} className="text-accent-secondary" />
+            <h2 className="font-display text-xl font-semibold text-foreground">
+              Çalışma Saatleri
+            </h2>
+          </div>
+          <div className="mt-4">
+            <HoursStatus />
+          </div>
+        </Reveal>
       </section>
     </div>
   );
