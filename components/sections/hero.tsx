@@ -5,7 +5,7 @@ import InstagramButton from "@/components/instagram-button";
 import { Reveal } from "@/components/reveal";
 import { CyclingWord } from "@/components/ui/cycling-word";
 
-const HERO_IMAGE = "/images/hero-flowers.webp";
+const HERO_IMAGE = "/images/hero-flowers-v2.webp";
 const HERO_ALT =
   "Sakura Çiçek Atölyesi'nde hazırlanan stargazer zambak, gül ve protea ile bir çiçek kümesi";
 const HEADLINE_WORDS = ["Elle", "Özenle", "Sevgiyle"];
