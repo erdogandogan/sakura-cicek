@@ -51,15 +51,15 @@ export default function Hero() {
             degeri, zamanla paragraftan kopup asiri bosluga sebep oldugu
             icin kaldirildi). */}
         <div className="relative z-10 mx-auto w-full max-w-7xl px-4 py-6 sm:px-6 lg:px-8 lg:py-10">
-          <Reveal>
+          <Reveal className="mt-6 sm:mt-0">
             <h1 className="flex max-w-[80%] flex-col gap-1 text-foreground sm:max-w-xl lg:max-w-2xl xl:max-w-3xl">
               <span className="font-display text-5xl font-semibold leading-tight tracking-tight sm:text-8xl lg:text-9xl xl:text-[10rem]">
                 Her Gün
               </span>
               <CyclingWord
                 words={HEADLINE_WORDS}
-                className="font-script text-7xl leading-tight text-accent-text sm:text-9xl lg:text-[10rem]"
-                widthClassName="w-[7ch] sm:w-[8ch] xl:w-[9ch]"
+                className="font-script text-6xl leading-tight text-accent-text sm:text-9xl lg:text-[10rem]"
+                widthClassName="w-[8ch] sm:w-[8ch] xl:w-[9ch]"
               />
               <span className="font-display text-3xl font-medium leading-tight tracking-tight sm:text-5xl lg:text-6xl xl:text-[4.25rem]">
                 Taze Hazırlanan
@@ -71,7 +71,7 @@ export default function Hero() {
           </Reveal>
 
           <Reveal delay={0.1} className="mt-6 lg:mt-10">
-            <div className="flex max-w-[80%] flex-col gap-5 sm:max-w-xl">
+            <div className="flex w-full flex-col gap-5 sm:max-w-xl">
               <p className="text-sm leading-relaxed text-muted-foreground sm:text-base lg:text-lg">
                 Talas&apos;taki atölyemizden sevdiklerinize özel buketler,
                 saksı çiçekleri ve yapay çiçek düzenlemeleri hazırlıyoruz.
