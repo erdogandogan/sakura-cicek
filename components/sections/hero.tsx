@@ -51,7 +51,7 @@ export default function Hero() {
             <CyclingWord
               words={HEADLINE_WORDS}
               className="font-script text-6xl leading-tight text-accent-text sm:text-8xl lg:text-9xl"
-              widthClassName="w-[6ch] sm:w-[7ch] xl:w-[8ch]"
+              widthClassName="w-[7ch] sm:w-[8ch] xl:w-[9ch]"
             />
             <span className="font-display text-2xl font-medium leading-tight tracking-tight sm:text-4xl lg:text-5xl xl:text-[3.5rem]">
               Taze Hazırlanan

@@ -28,7 +28,7 @@ export function CyclingWord({
 
   return (
     <span
-      className={`relative inline-block h-[1.5em] overflow-y-hidden overflow-x-visible align-bottom ${widthClassName} ${className}`}
+      className={`relative inline-block h-[1.5em] overflow-hidden align-bottom ${widthClassName} ${className}`}
     >
       {words.map((word, i) => {
         // Her gecis ayni yonde (asagi) olsun diye "az once cikan kelime"
@@ -39,7 +39,7 @@ export function CyclingWord({
         return (
           <motion.span
             key={word}
-            className="absolute left-0 top-[0.15em] whitespace-nowrap"
+            className="absolute left-0 top-[0.15em] w-full whitespace-nowrap text-center"
             initial={false}
             animate={
               reduceMotion
@@ -51,7 +51,16 @@ export function CyclingWord({
             transition={
               reduceMotion
                 ? { duration: 0 }
-                : { type: "spring", stiffness: 50 }
+                : {
+                    y: { type: "spring", stiffness: 50 },
+                    // Opacity'yi spring yerine hizli bir tween ile
+                    // ayri ele aliyoruz: spring yumusak/yavas
+                    // sonumlendigi icin cikan ve giren kelime bir
+                    // sure birlikte gorunur kaliyor, ust uste binmis
+                    // gibi durup Safari'de belirgin bir "iki kelime
+                    // ayni anda" hatasi olarak goze carpiyordu.
+                    opacity: { duration: 0.2 },
+                  }
             }
           >
             {word}
