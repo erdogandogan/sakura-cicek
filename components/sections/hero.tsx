@@ -31,7 +31,7 @@ function HeroCta() {
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-background">
-      <div className="hero-media-frame relative flex items-stretch">
+      <div className="hero-media-frame relative flex items-center">
         <div className="pointer-events-none absolute inset-y-0 right-0 z-20 w-[54%] sm:w-[56%] lg:w-[62%] xl:w-[58%]">
           <Image
             src={HERO_IMAGE}
