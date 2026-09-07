@@ -3,6 +3,7 @@ import Link from "next/link";
 import WhatsAppButton from "@/components/whatsapp-button";
 import InstagramButton from "@/components/instagram-button";
 import { Reveal } from "@/components/reveal";
+import { HeroParallaxHeading } from "@/components/hero-parallax-heading";
 
 const HERO_IMAGE = "/images/hero-flowers.webp";
 const HERO_ALT =
@@ -44,11 +45,11 @@ export default function Hero() {
 
         <Reveal className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex max-w-lg flex-col gap-6">
-            <h1 className="font-display text-6xl font-semibold leading-[1.05] tracking-tight text-foreground xl:text-7xl">
+            <HeroParallaxHeading className="font-display text-6xl font-semibold leading-[1.05] tracking-tight text-foreground xl:text-7xl">
               Her Gün <span className="font-normal italic text-accent-text">Elle</span>
               <br />
               Hazırlanan Taze Buketler
-            </h1>
+            </HeroParallaxHeading>
             <p className="max-w-sm text-lg leading-relaxed text-muted-foreground">
               Talas&apos;taki atölyemizden sevdiklerinize özel buketler, saksı
               çiçekleri ve yapay çiçek düzenlemeleri hazırlıyoruz.
@@ -76,10 +77,10 @@ export default function Hero() {
           delay={0.1}
           className="relative z-10 -mt-16 flex flex-col gap-5 px-4 pb-14 sm:-mt-20 sm:px-6"
         >
-          <h1 className="max-w-[15ch] font-display text-5xl font-semibold leading-[1.02] tracking-tight text-foreground sm:text-6xl">
+          <HeroParallaxHeading className="max-w-[15ch] font-display text-5xl font-semibold leading-[1.02] tracking-tight text-foreground sm:text-6xl">
             Her Gün <span className="font-normal italic text-accent-text">Elle</span>{" "}
             Hazırlanan Taze Buketler
-          </h1>
+          </HeroParallaxHeading>
           <p className="max-w-sm text-base leading-relaxed text-muted-foreground">
             Talas&apos;taki atölyemizden sevdiklerinize özel buketler, saksı
             çiçekleri ve yapay çiçek düzenlemeleri hazırlıyoruz.

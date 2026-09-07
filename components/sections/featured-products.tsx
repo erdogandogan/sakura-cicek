@@ -14,7 +14,7 @@ const featuredIds = [
   "kir-cicegi-buketi",
 ];
 
-const backdrops = ["bg-accent-soft", "bg-surface", "bg-accent-secondary/10"];
+const backdrops = ["bg-accent-soft", "bg-background", "bg-accent-secondary/10"];
 const tilts = ["-rotate-2", "rotate-1", "-rotate-1", "rotate-2", "-rotate-1", "rotate-2"];
 
 export default function FeaturedProducts() {
@@ -23,7 +23,7 @@ export default function FeaturedProducts() {
     .filter((p): p is (typeof products)[number] => Boolean(p) && Boolean(p?.image));
 
   return (
-    <section className="overflow-hidden py-16">
+    <section className="overflow-hidden bg-surface py-16">
       <div className="mx-auto flex max-w-7xl items-end justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <Reveal>
           <h2 className="font-display text-3xl font-semibold text-foreground md:text-4xl">

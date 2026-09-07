@@ -19,13 +19,13 @@ const categories: {
     category: "saksi",
     label: "Saksı Çiçeği",
     description: "Evinize ve ofisinize uzun süre eşlik eden bitkiler.",
-    image: "/images/instagram/orkide-turuncu-saksi.jpg",
+    image: "/images/instagram/mimoza-anthurium-saksi.jpg",
   },
   {
     category: "yapay",
     label: "Yapay Çiçek",
     description: "Bakım gerektirmeyen, solmayan çiçek düzenlemeleri.",
-    image: "/images/instagram/aranjman-lavanta-mor.jpg",
+    image: "/images/instagram/aranjman-gumus-kase.jpg",
   },
 ];
 

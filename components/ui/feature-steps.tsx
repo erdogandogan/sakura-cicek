@@ -24,19 +24,21 @@ export function FeatureSteps({
   autoPlayInterval = 3000,
   className = "",
 }: FeatureStepsProps) {
-  const [currentFeature, setCurrentFeature] = useState(0);
-  const [progress, setProgress] = useState(0);
+  const [elapsed, setElapsed] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setProgress((prev) => {
-        if (prev < 100) return prev + 100 / (autoPlayInterval / 100);
-        setCurrentFeature((f) => (f + 1) % features.length);
-        return 0;
-      });
+      setElapsed((prev) => prev + 100);
     }, 100);
     return () => clearInterval(timer);
-  }, [features.length, autoPlayInterval]);
+  }, []);
+
+  // currentFeature turetilmis bir deger: React Strict Mode'da setState
+  // guncelleyicisinin icinden baska bir setState tetiklemek (onceki
+  // yaklasim) cift calisip adimin geriye atlamasina yol aciyordu. Tek
+  // bir sayacdan turetmek bunu monotonik ve kararli hale getirir.
+  const currentFeature =
+    Math.floor(elapsed / autoPlayInterval) % features.length;
 
   return (
     <div className={className}>
