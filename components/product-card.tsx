@@ -31,9 +31,9 @@ export default function ProductCard({ product }: { product: Product }) {
           {categoryLabels[product.category]}
         </span>
       </div>
-      <div className="flex flex-1 flex-col gap-3 p-4">
+      <div className="flex flex-1 flex-col gap-3 p-3 sm:p-4">
         <div>
-          <h3 className="font-display text-lg font-semibold leading-snug text-foreground">
+          <h3 className="font-display text-base font-semibold leading-snug text-foreground sm:text-lg">
             {product.name}
           </h3>
           <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
@@ -42,7 +42,7 @@ export default function ProductCard({ product }: { product: Product }) {
         </div>
         <WhatsAppButton
           productName={product.name}
-          label="WhatsApp'tan Sipariş Ver"
+          label="Sipariş Ver"
           className="mt-auto w-full"
         />
       </div>
