@@ -3,10 +3,12 @@ import Link from "next/link";
 import WhatsAppButton from "@/components/whatsapp-button";
 import InstagramButton from "@/components/instagram-button";
 import { Reveal } from "@/components/reveal";
+import { CyclingWord } from "@/components/ui/cycling-word";
 
 const HERO_IMAGE = "/images/hero-flowers.webp";
 const HERO_ALT =
   "Sakura Çiçek Atölyesi'nde hazırlanan stargazer zambak, gül ve protea ile bir çiçek kümesi";
+const HEADLINE_WORDS = ["Elle", "Özenle", "Sevgiyle"];
 
 function HeroCta() {
   return (
@@ -38,14 +40,18 @@ export default function Hero() {
             fill
             priority
             sizes="46vw"
-            className="object-cover object-[62%_38%] [mask-image:linear-gradient(to_right,transparent,white_16%)]"
+            className="object-cover object-[68%_42%] [mask-image:linear-gradient(to_right,transparent,white_12%)]"
           />
         </div>
 
         <Reveal className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex max-w-lg flex-col gap-6">
             <h1 className="font-display text-6xl font-semibold leading-[1.05] tracking-tight text-foreground xl:text-7xl">
-              Her Gün <span className="font-normal italic text-accent-text">Elle</span>
+              Her Gün{" "}
+              <CyclingWord
+                words={HEADLINE_WORDS}
+                className="font-normal italic text-accent-text"
+              />
               <br />
               Hazırlanan Taze Buketler
             </h1>
@@ -67,7 +73,7 @@ export default function Hero() {
             fill
             priority
             sizes="100vw"
-            className="object-cover object-[55%_30%]"
+            className="object-cover object-[65%_28%]"
           />
           <div className="absolute inset-0 [background:linear-gradient(to_bottom,transparent_0%,transparent_42%,var(--background)_75%,var(--background)_100%)]" />
         </Reveal>
@@ -77,7 +83,11 @@ export default function Hero() {
           className="relative z-10 -mt-16 flex flex-col gap-5 px-4 pb-14 sm:-mt-20 sm:px-6"
         >
           <h1 className="max-w-[15ch] font-display text-5xl font-semibold leading-[1.02] tracking-tight text-foreground sm:text-6xl">
-            Her Gün <span className="font-normal italic text-accent-text">Elle</span>{" "}
+            Her Gün{" "}
+            <CyclingWord
+              words={HEADLINE_WORDS}
+              className="font-normal italic text-accent-text"
+            />{" "}
             Hazırlanan Taze Buketler
           </h1>
           <p className="max-w-sm text-base leading-relaxed text-muted-foreground">
