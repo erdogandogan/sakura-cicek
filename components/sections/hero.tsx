@@ -16,11 +16,14 @@ export default function Hero() {
           çiçekleri ve yapay çiçek düzenlemeleri hazırlıyoruz.
         </p>
         <div className="flex flex-wrap gap-3">
-          <WhatsAppButton label="WhatsApp'tan Yaz" />
-          <InstagramButton />
+          <WhatsAppButton
+            label="WhatsApp'tan Yaz"
+            className="shadow-lg shadow-accent/40"
+          />
+          <InstagramButton variant="soft" />
           <Link
             href="/urunler"
-            className="inline-flex min-h-11 items-center justify-center rounded-full border border-border px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-accent-text hover:text-accent-text"
+            className="inline-flex min-h-11 items-center justify-center rounded-full border border-border px-5 py-3 text-sm font-semibold text-foreground transition-transform hover:-translate-y-0.5 hover:border-accent-text hover:text-accent-text active:translate-y-0"
           >
             Ürünleri Gör
           </Link>

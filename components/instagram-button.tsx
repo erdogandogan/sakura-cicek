@@ -4,7 +4,7 @@ import { shopInfo } from "@/lib/shop-info";
 
 interface InstagramButtonProps {
   label?: string;
-  variant?: "primary" | "secondary" | "onAccent";
+  variant?: "primary" | "secondary" | "soft" | "onAccent";
   className?: string;
   iconOnly?: boolean;
 }

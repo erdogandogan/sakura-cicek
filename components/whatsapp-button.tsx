@@ -15,7 +15,7 @@ export default function WhatsAppButton({
   className = "",
 }: WhatsAppButtonProps) {
   const base =
-    "inline-flex min-h-11 items-center justify-center gap-1.5 whitespace-nowrap rounded-full px-4 py-3 text-sm font-semibold transition-transform active:scale-[0.97]";
+    "inline-flex min-h-11 items-center justify-center gap-1.5 whitespace-nowrap rounded-full px-4 py-3 text-sm font-semibold transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97]";
   const variantStyles = {
     primary: "bg-accent text-accent-foreground hover:brightness-105",
     secondary:
