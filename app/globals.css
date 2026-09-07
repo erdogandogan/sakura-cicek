@@ -26,6 +26,7 @@
   --color-accent-secondary: var(--accent-secondary);
   --font-display: var(--font-cormorant);
   --font-body: var(--font-manrope);
+  --font-script: var(--font-dancing);
   --radius-panel: 0;
 }
 

@@ -46,14 +46,21 @@ export default function Hero() {
 
         <Reveal className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex max-w-lg flex-col gap-6">
-            <h1 className="font-display text-6xl font-semibold leading-[1.05] tracking-tight text-foreground xl:text-7xl">
-              Her Gün{" "}
+            <h1 className="flex flex-col text-foreground">
+              <span className="font-display text-5xl font-semibold leading-tight tracking-tight xl:text-6xl">
+                Her Gün
+              </span>
               <CyclingWord
                 words={HEADLINE_WORDS}
-                className="font-normal italic text-accent-text"
+                className="font-script text-7xl leading-tight text-accent-text xl:text-8xl"
+                widthClassName="w-[6ch] xl:w-[7ch]"
               />
-              <br />
-              Hazırlanan Taze Buketler
+              <span className="font-display text-2xl font-medium leading-tight tracking-tight xl:text-3xl">
+                Taze Hazırlanan
+              </span>
+              <span className="font-display text-6xl font-semibold leading-tight tracking-tight xl:text-7xl">
+                Buketler
+              </span>
             </h1>
             <p className="max-w-sm text-lg leading-relaxed text-muted-foreground">
               Talas&apos;taki atölyemizden sevdiklerinize özel buketler, saksı
@@ -82,13 +89,21 @@ export default function Hero() {
           delay={0.1}
           className="relative z-10 -mt-16 flex flex-col gap-5 px-4 pb-14 sm:-mt-20 sm:px-6"
         >
-          <h1 className="max-w-[15ch] font-display text-5xl font-semibold leading-[1.02] tracking-tight text-foreground sm:text-6xl">
-            Her Gün{" "}
+          <h1 className="flex flex-col text-foreground">
+            <span className="font-display text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
+              Her Gün
+            </span>
             <CyclingWord
               words={HEADLINE_WORDS}
-              className="font-normal italic text-accent-text"
-            />{" "}
-            Hazırlanan Taze Buketler
+              className="font-script text-6xl leading-tight text-accent-text sm:text-7xl"
+              widthClassName="w-[6ch]"
+            />
+            <span className="font-display text-xl font-medium leading-tight tracking-tight sm:text-2xl">
+              Taze Hazırlanan
+            </span>
+            <span className="font-display text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
+              Buketler
+            </span>
           </h1>
           <p className="max-w-sm text-base leading-relaxed text-muted-foreground">
             Talas&apos;taki atölyemizden sevdiklerinize özel buketler, saksı

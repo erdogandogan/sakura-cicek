@@ -28,12 +28,12 @@ export function CyclingWord({
 
   return (
     <span
-      className={`relative inline-block h-[1.15em] overflow-hidden align-bottom ${widthClassName}`}
+      className={`relative inline-block h-[1.5em] overflow-hidden align-bottom ${widthClassName} ${className}`}
     >
       {words.map((word, i) => (
         <motion.span
           key={word}
-          className={`absolute left-0 top-0 whitespace-nowrap ${className}`}
+          className="absolute left-0 top-[0.15em] whitespace-nowrap"
           initial={false}
           animate={
             reduceMotion
