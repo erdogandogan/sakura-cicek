@@ -39,7 +39,7 @@ export function CyclingWord({
         return (
           <motion.span
             key={word}
-            className="absolute left-0 top-[0.15em] w-full whitespace-nowrap text-center"
+            className="absolute left-0 top-[0.15em] w-full whitespace-nowrap text-left"
             initial={false}
             animate={
               reduceMotion

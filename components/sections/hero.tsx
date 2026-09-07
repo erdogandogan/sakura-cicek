@@ -45,18 +45,18 @@ export default function Hero() {
 
         <Reveal className="relative z-10 -mt-10 mx-auto w-full max-w-7xl px-4 py-6 sm:-mt-14 sm:px-6 lg:-mt-20 lg:px-8 lg:py-10">
           <h1 className="flex max-w-[80%] flex-col gap-1 text-foreground sm:max-w-xl lg:max-w-2xl xl:max-w-3xl">
-            <span className="font-display text-4xl font-semibold leading-tight tracking-tight sm:text-7xl lg:text-8xl xl:text-9xl">
+            <span className="font-display text-5xl font-semibold leading-tight tracking-tight sm:text-8xl lg:text-9xl xl:text-[10rem]">
               Her Gün
             </span>
             <CyclingWord
               words={HEADLINE_WORDS}
-              className="font-script text-6xl leading-tight text-accent-text sm:text-8xl lg:text-9xl"
+              className="font-script text-7xl leading-tight text-accent-text sm:text-9xl lg:text-[10rem]"
               widthClassName="w-[7ch] sm:w-[8ch] xl:w-[9ch]"
             />
-            <span className="font-display text-2xl font-medium leading-tight tracking-tight sm:text-4xl lg:text-5xl xl:text-[3.5rem]">
+            <span className="font-display text-3xl font-medium leading-tight tracking-tight sm:text-5xl lg:text-6xl xl:text-[4.25rem]">
               Taze Hazırlanan
             </span>
-            <span className="font-display text-4xl font-semibold leading-tight tracking-tight sm:text-7xl lg:text-8xl xl:text-[9rem]">
+            <span className="font-display text-5xl font-semibold leading-tight tracking-tight sm:text-8xl lg:text-9xl xl:text-[10.5rem]">
               Buketler
             </span>
           </h1>
