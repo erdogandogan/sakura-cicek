@@ -51,21 +51,21 @@ export default function Hero() {
             degeri, zamanla paragraftan kopup asiri bosluga sebep oldugu
             icin kaldirildi). */}
         <div className="relative z-10 mx-auto w-full max-w-7xl px-4 py-6 sm:px-6 lg:px-8 lg:py-10">
-          <Reveal className="mt-6 sm:mt-0">
+          <Reveal className="mt-4 sm:mt-0">
             <h1 className="flex max-w-[80%] flex-col gap-1 text-foreground sm:max-w-xl lg:max-w-2xl xl:max-w-3xl">
-              <span className="font-display text-5xl font-semibold leading-tight tracking-tight sm:text-8xl lg:text-9xl xl:text-[10rem]">
+              <span className="font-display text-5xl font-semibold leading-tight tracking-tight sm:text-8xl">
                 Her Gün
               </span>
               <CyclingWord
                 words={HEADLINE_WORDS}
-                className="font-script text-6xl leading-tight text-accent-text sm:text-9xl lg:text-[10rem]"
+                className="font-script text-6xl leading-tight text-accent-text sm:text-9xl"
                 widthClassName="w-[8ch] sm:w-[8ch] xl:w-[9ch]"
               />
-              <span className="font-display text-3xl font-medium leading-tight tracking-tight sm:text-5xl lg:text-6xl xl:text-[4.25rem]">
-                Taze Hazırlanan
+              <span className="font-display text-3xl font-medium leading-tight tracking-tight sm:text-5xl">
+                Hazırlanan
               </span>
-              <span className="font-display text-5xl font-semibold leading-tight tracking-tight sm:text-8xl lg:text-9xl xl:text-[10.5rem]">
-                Buketler
+              <span className="font-display text-5xl font-semibold leading-tight tracking-tight sm:text-8xl">
+                Taze Buketler
               </span>
             </h1>
           </Reveal>
