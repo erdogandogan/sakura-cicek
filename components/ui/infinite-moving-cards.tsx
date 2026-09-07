@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Quotes } from "@phosphor-icons/react/dist/ssr";
 import { Marquee } from "@/components/ui/marquee";
 
@@ -5,6 +6,7 @@ export interface TestimonialItem {
   quote: string;
   name: string;
   title: string;
+  photo?: string;
 }
 
 interface InfiniteMovingCardsProps {
@@ -33,19 +35,32 @@ export function InfiniteMovingCards({
       {items.map((item, idx) => (
         <div
           key={idx}
-          className="relative h-full rounded-panel border border-border bg-background px-6 py-6"
+          className="relative flex h-full flex-col border border-border bg-background"
         >
-          <Quotes size={22} weight="fill" className="text-accent-secondary" />
-          <p className="mt-3 text-sm leading-relaxed text-foreground">
-            {item.quote}
-          </p>
-          <div className="mt-4">
-            <span className="block text-sm font-semibold text-foreground">
-              {item.name}
-            </span>
-            <span className="block text-xs text-muted-foreground">
-              {item.title}
-            </span>
+          {item.photo && (
+            <div className="relative aspect-[4/3] w-full overflow-hidden">
+              <Image
+                src={item.photo}
+                alt={`${item.name} tarafından paylaşılan fotoğraf`}
+                fill
+                sizes="380px"
+                className="object-cover"
+              />
+            </div>
+          )}
+          <div className="px-6 py-6">
+            <Quotes size={22} weight="fill" className="text-accent-secondary" />
+            <p className="mt-3 text-sm leading-relaxed text-foreground">
+              {item.quote}
+            </p>
+            <div className="mt-4">
+              <span className="block text-sm font-semibold text-foreground">
+                {item.name}
+              </span>
+              <span className="block text-xs text-muted-foreground">
+                {item.title}
+              </span>
+            </div>
           </div>
         </div>
       ))}

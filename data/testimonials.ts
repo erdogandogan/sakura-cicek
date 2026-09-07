@@ -1,12 +1,23 @@
 import type { TestimonialItem } from "@/components/ui/infinite-moving-cards";
 
-// Yer tutucu yorum(lar) — gerçek Google Maps yorumları eklendiğinde
-// bu listeyi güncelleyin.
+// Google Maps üzerindeki gerçek müşteri yorumları.
 export const testimonials: TestimonialItem[] = [
   {
     quote:
-      "Yıl dönümümüz için sipariş verdiğim buket tam istediğim gibi geldi. Renkleri ve kokusu günlerce evi doldurdu.",
-    name: "Elif Karaca",
-    title: "Düzenli müşteri",
+      "Kayseri'de mis gibi taptaze çiçekleri olan yeni bir yer, uzun soluklu olacağına çok eminim. Çiçek siparişi verirken kesinlikle aklınızda olsun.",
+    name: "Duygu Dağlı",
+    title: "Google değerlendirmesi",
+  },
+  {
+    quote:
+      "Nişan çiçeğinden düğün arabamın çiçeklerine ve her türlü özel gün çiçeğimi temin edebildiğim harika bir mekan. Siz çiçeklere bakarken kahvenizi bile hazır ediyorlar. Kesinlikle tavsiye ederim.",
+    name: "Halil Avcı",
+    title: "Google değerlendirmesi",
+  },
+  {
+    quote: "Çeşit olarak çok geniş istediğinizi bulacağınız güleryüzlü bir işletme.",
+    name: "Ahmet Semih Boyacı",
+    title: "Google değerlendirmesi",
+    photo: "/images/review-ahmet-semih.webp",
   },
 ];
