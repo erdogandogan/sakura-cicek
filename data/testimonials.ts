@@ -18,6 +18,5 @@ export const testimonials: TestimonialItem[] = [
     quote: "Çeşit olarak çok geniş istediğinizi bulacağınız güleryüzlü bir işletme.",
     name: "Ahmet Semih Boyacı",
     title: "Google değerlendirmesi",
-    photo: "/images/review-ahmet-semih.webp",
   },
 ];
