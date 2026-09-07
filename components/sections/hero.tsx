@@ -58,25 +58,25 @@ export default function Hero() {
         </Reveal>
       </div>
 
-      {/* Mobil ve tablet: ayrı, alt alta düzen */}
+      {/* Mobil ve tablet: çiçeğin bulanıklaşan alt kısmına metnin taştığı, iç içe geçen düzen */}
       <div className="lg:hidden">
-        <Reveal className="relative h-[300px] w-full sm:h-[380px]">
+        <Reveal className="relative h-[380px] w-full sm:h-[460px]">
           <Image
             src={HERO_IMAGE}
             alt={HERO_ALT}
             fill
             priority
             sizes="100vw"
-            className="object-cover object-[58%_35%]"
+            className="object-cover object-[55%_30%]"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background" />
+          <div className="absolute inset-0 [background:linear-gradient(to_bottom,transparent_0%,transparent_42%,var(--background)_75%,var(--background)_100%)]" />
         </Reveal>
 
         <Reveal
           delay={0.1}
-          className="flex flex-col gap-5 px-4 pb-14 pt-6 sm:px-6"
+          className="relative z-10 -mt-16 flex flex-col gap-5 px-4 pb-14 sm:-mt-20 sm:px-6"
         >
-          <h1 className="font-display text-4xl font-semibold leading-[1.1] tracking-tight text-foreground">
+          <h1 className="max-w-[15ch] font-display text-5xl font-semibold leading-[1.02] tracking-tight text-foreground sm:text-6xl">
             Her Gün <span className="font-normal italic text-accent-text">Elle</span>{" "}
             Hazırlanan Taze Buketler
           </h1>
