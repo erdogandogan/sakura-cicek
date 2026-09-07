@@ -31,7 +31,7 @@ function HeroCta() {
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-background">
-      <div className="hero-media-frame relative flex items-center">
+      <div className="hero-media-frame relative flex items-stretch">
         <div className="pointer-events-none absolute inset-y-0 right-0 z-20 w-[54%] sm:w-[56%] lg:w-[62%] xl:w-[58%]">
           <Image
             src={HERO_IMAGE}
@@ -43,8 +43,8 @@ export default function Hero() {
           />
         </div>
 
-        <Reveal className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 className="flex max-w-[80%] flex-col text-foreground sm:max-w-xl lg:max-w-2xl xl:max-w-3xl">
+        <Reveal className="relative z-10 mx-auto w-full max-w-7xl px-4 py-6 sm:px-6 lg:px-8 lg:py-10">
+          <h1 className="flex h-full max-w-[80%] flex-col justify-between text-foreground sm:max-w-xl lg:max-w-2xl xl:max-w-3xl">
             <span className="font-display text-4xl font-semibold leading-tight tracking-tight sm:text-7xl lg:text-8xl xl:text-9xl">
               Her Gün
             </span>
@@ -65,7 +65,7 @@ export default function Hero() {
 
       <Reveal
         delay={0.1}
-        className="relative z-10 mx-auto w-full max-w-7xl px-4 pb-10 pt-6 sm:px-6 lg:px-8 lg:pb-14 lg:pt-8"
+        className="relative z-10 -mt-6 mx-auto w-full max-w-7xl px-4 pb-10 sm:px-6 lg:-mt-16 lg:px-8 lg:pb-14"
       >
         <div className="flex max-w-xl flex-col gap-5">
           <p className="text-sm leading-relaxed text-muted-foreground sm:text-base lg:text-lg">
