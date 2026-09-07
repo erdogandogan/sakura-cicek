@@ -22,13 +22,21 @@ export function AutoScrollRow({
     const el = scrollerRef.current;
     if (!el) return;
 
+    // Uc kopya (orijinal + 2 klon) tutuyoruz ki kullanici sola veya saga
+    // ne kadar surerse sursun her zaman ayni icerigin bir kopyasi
+    // etrafta olsun; "scroll" olayinda kenara yaklasildikca sessizce
+    // ortaki kopyaya geri isiniyoruz, boylece basta/sonda durmuyor ve
+    // sicrama fark edilmiyor (butun kopyalar ozdes).
     const originalChildren = Array.from(el.children);
     originalChildren.forEach((child) => el.appendChild(child.cloneNode(true)));
+    originalChildren.forEach((child) => el.appendChild(child.cloneNode(true)));
+
+    const setWidth = () => el.scrollWidth / 3;
+    el.scrollLeft = setWidth();
 
     const reduceMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)",
     ).matches;
-    if (reduceMotion) return;
 
     let lastTime = performance.now();
     let rafId = requestAnimationFrame(step);
@@ -36,15 +44,21 @@ export function AutoScrollRow({
     function step(time: number) {
       const delta = time - lastTime;
       lastTime = time;
-      if (!pausedRef.current && el) {
+      if (!pausedRef.current && el && !reduceMotion) {
         el.scrollLeft += (pxPerSecond * delta) / 1000;
-        const halfWidth = el.scrollWidth / 2;
-        if (el.scrollLeft >= halfWidth) {
-          el.scrollLeft -= halfWidth;
-        }
       }
       rafId = requestAnimationFrame(step);
     }
+
+    const recenter = () => {
+      const width = setWidth();
+      if (el.scrollLeft < width * 0.5) {
+        el.scrollLeft += width;
+      } else if (el.scrollLeft > width * 1.5) {
+        el.scrollLeft -= width;
+      }
+    };
+    el.addEventListener("scroll", recenter, { passive: true });
 
     const pause = () => {
       pausedRef.current = true;
@@ -64,6 +78,7 @@ export function AutoScrollRow({
 
     return () => {
       cancelAnimationFrame(rafId);
+      el.removeEventListener("scroll", recenter);
       el.removeEventListener("pointerdown", pause);
       el.removeEventListener("pointerup", resume);
       el.removeEventListener("pointercancel", resume);

@@ -40,7 +40,7 @@ export default function AtelierGallery() {
   return (
     <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
       <Reveal className="mb-8 flex flex-wrap items-end justify-between gap-4">
-        <h2 className="font-display text-3xl font-semibold text-foreground md:text-4xl">
+        <h2 className="font-display text-4xl font-semibold text-foreground md:text-5xl">
           Atölyeden Kareler
         </h2>
         <a

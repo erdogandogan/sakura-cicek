@@ -4,7 +4,7 @@ import { Reveal } from "@/components/reveal";
 
 export default function StoryTeaser() {
   return (
-    <section className="bg-surface">
+    <section className="bg-accent-soft">
       <div className="mx-auto grid max-w-7xl items-stretch gap-0 sm:px-6 lg:grid-cols-2 lg:px-8">
         <Reveal className="relative min-h-[280px] w-full lg:min-h-[420px]">
           <Image

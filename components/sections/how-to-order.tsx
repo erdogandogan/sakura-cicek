@@ -6,20 +6,17 @@ const orderSteps = [
   {
     step: "Adım 1",
     title: "Ürünü Seç",
-    icon: <MagnifyingGlass size={20} weight="light" />,
-    image: "/images/instagram/buket-beyaz-krem.jpg",
+    icon: <MagnifyingGlass size={28} weight="light" />,
   },
   {
     step: "Adım 2",
     title: "WhatsApp'tan Yaz",
-    icon: <WhatsappLogo size={20} weight="light" />,
-    image: "/images/instagram/orkide-turuncu-saksi.jpg",
+    icon: <WhatsappLogo size={28} weight="light" />,
   },
   {
     step: "Adım 3",
     title: "Detayları Konuşalım",
-    icon: <ChatCircleDots size={20} weight="light" />,
-    image: "/images/instagram/aranjman-krem-altin-vazo.jpg",
+    icon: <ChatCircleDots size={28} weight="light" />,
   },
 ];
 
@@ -32,6 +29,7 @@ export default function HowToOrder() {
             features={orderSteps}
             title="Nasıl Sipariş Verilir"
             autoPlayInterval={3500}
+            showImage={false}
           />
         </Reveal>
       </div>

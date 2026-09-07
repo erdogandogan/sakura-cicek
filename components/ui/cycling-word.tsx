@@ -30,27 +30,34 @@ export function CyclingWord({
     <span
       className={`relative inline-block h-[1.5em] overflow-hidden align-bottom ${widthClassName} ${className}`}
     >
-      {words.map((word, i) => (
-        <motion.span
-          key={word}
-          className="absolute left-0 top-[0.15em] whitespace-nowrap"
-          initial={false}
-          animate={
-            reduceMotion
-              ? { y: 0, opacity: index === i ? 1 : 0 }
-              : index === i
-                ? { y: 0, opacity: 1 }
-                : { y: index > i ? "-100%" : "100%", opacity: 0 }
-          }
-          transition={
-            reduceMotion
-              ? { duration: 0 }
-              : { type: "spring", stiffness: 50 }
-          }
-        >
-          {word}
-        </motion.span>
-      ))}
+      {words.map((word, i) => {
+        // Her gecis ayni yonde (asagi) olsun diye "az once cikan kelime"
+        // modulo ile hesaplanir; index>i gibi mutlak bir kiyas son
+        // kelimeden ilkine donerken yonu ters cevirip tutarsiz bir
+        // sicrama olusturuyordu.
+        const justExited = i === (index - 1 + words.length) % words.length;
+        return (
+          <motion.span
+            key={word}
+            className="absolute left-0 top-[0.15em] whitespace-nowrap"
+            initial={false}
+            animate={
+              reduceMotion
+                ? { y: 0, opacity: index === i ? 1 : 0 }
+                : index === i
+                  ? { y: 0, opacity: 1 }
+                  : { y: justExited ? "100%" : "-100%", opacity: 0 }
+            }
+            transition={
+              reduceMotion
+                ? { duration: 0 }
+                : { type: "spring", stiffness: 50 }
+            }
+          >
+            {word}
+          </motion.span>
+        );
+      })}
     </span>
   );
 }
