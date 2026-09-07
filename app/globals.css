@@ -51,6 +51,22 @@ h1, h2, h3, h4 {
     var(--animation-direction, forwards) linear infinite;
 }
 
+.hero-media-frame {
+  min-height: 420px;
+}
+
+@media (min-width: 640px) {
+  .hero-media-frame {
+    min-height: 560px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-media-frame {
+    min-height: 1160px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
