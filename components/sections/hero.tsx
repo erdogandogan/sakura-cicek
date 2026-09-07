@@ -44,7 +44,7 @@ export default function Hero() {
         </div>
 
         <Reveal className="relative z-10 mx-auto w-full max-w-7xl px-4 py-6 sm:px-6 lg:px-8 lg:py-10">
-          <h1 className="flex h-full max-w-[80%] flex-col justify-between text-foreground sm:max-w-xl lg:max-w-2xl xl:max-w-3xl">
+          <h1 className="flex max-w-[80%] flex-col gap-1 text-foreground sm:max-w-xl lg:max-w-2xl xl:max-w-3xl">
             <span className="font-display text-4xl font-semibold leading-tight tracking-tight sm:text-7xl lg:text-8xl xl:text-9xl">
               Her Gün
             </span>

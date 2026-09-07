@@ -22,9 +22,9 @@ export default function ProductCatalog({
 
   const filtered = useMemo(
     () =>
-      active === "tumu"
-        ? products
-        : products.filter((p) => p.category === active),
+      products.filter(
+        (p) => Boolean(p.image) && (active === "tumu" || p.category === active),
+      ),
     [active],
   );
 
