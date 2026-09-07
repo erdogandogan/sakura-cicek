@@ -4,45 +4,89 @@ import WhatsAppButton from "@/components/whatsapp-button";
 import InstagramButton from "@/components/instagram-button";
 import { Reveal } from "@/components/reveal";
 
+const HERO_IMAGE = "/images/hero-flowers.webp";
+const HERO_ALT =
+  "Sakura Çiçek Atölyesi'nde hazırlanan stargazer zambak, gül ve protea ile bir çiçek kümesi";
+
+function HeroCta() {
+  return (
+    <div className="flex flex-wrap gap-3">
+      <WhatsAppButton
+        label="WhatsApp'tan Yaz"
+        className="shadow-lg shadow-accent/40"
+      />
+      <InstagramButton variant="soft" />
+      <Link
+        href="/urunler"
+        className="inline-flex min-h-11 items-center justify-center border border-border px-5 py-3 text-sm font-semibold text-foreground transition-transform hover:-translate-y-0.5 hover:border-accent-text hover:text-accent-text active:translate-y-0"
+      >
+        Ürünleri Gör
+      </Link>
+    </div>
+  );
+}
+
 export default function Hero() {
   return (
-    <section className="mx-auto grid max-w-7xl items-center gap-10 px-4 pb-16 pt-10 sm:px-6 lg:grid-cols-[3fr_2fr] lg:gap-16 lg:px-8 lg:pt-16">
-      <Reveal className="order-2 flex flex-col items-start gap-6 lg:order-1">
-        <h1 className="font-display text-4xl font-semibold leading-[1.1] tracking-tight text-foreground md:text-5xl lg:text-6xl">
-          Her Gün Elle Hazırlanan Taze Buketler
-        </h1>
-        <p className="max-w-md text-base leading-relaxed text-muted-foreground md:text-lg">
-          Talas&apos;taki atölyemizden sevdiklerinize özel buketler, saksı
-          çiçekleri ve yapay çiçek düzenlemeleri hazırlıyoruz.
-        </p>
-        <div className="flex flex-wrap gap-3">
-          <WhatsAppButton
-            label="WhatsApp'tan Yaz"
-            className="shadow-lg shadow-accent/40"
+    <section className="relative overflow-hidden bg-background">
+      {/* Masaüstü: sağdan taşan görsel + sol tarafta metin */}
+      <div className="relative hidden lg:flex lg:min-h-[640px] lg:items-center">
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-[50%] xl:w-[46%]">
+          <Image
+            src={HERO_IMAGE}
+            alt={HERO_ALT}
+            fill
+            priority
+            sizes="46vw"
+            className="object-cover object-[62%_38%] [mask-image:linear-gradient(to_right,transparent,white_16%)]"
           />
-          <InstagramButton variant="soft" />
-          <Link
-            href="/urunler"
-            className="inline-flex min-h-11 items-center justify-center rounded-none border border-border px-5 py-3 text-sm font-semibold text-foreground transition-transform hover:-translate-y-0.5 hover:border-accent-text hover:text-accent-text active:translate-y-0"
-          >
-            Ürünleri Gör
-          </Link>
         </div>
-      </Reveal>
 
-      <Reveal
-        delay={0.1}
-        className="relative order-1 aspect-[4/5] w-full overflow-hidden rounded-panel lg:order-2"
-      >
-        <Image
-          src="/images/instagram/buket-bordo-karisik.jpg"
-          alt="Sakura Çiçek Atölyesi'nde hazırlanan protea ve dahlia ile bir buket"
-          fill
-          sizes="(max-width: 1024px) 100vw, 40vw"
-          priority
-          className="object-cover"
-        />
-      </Reveal>
+        <Reveal className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex max-w-lg flex-col gap-6">
+            <h1 className="font-display text-6xl font-semibold leading-[1.05] tracking-tight text-foreground xl:text-7xl">
+              Her Gün <span className="font-normal italic text-accent-text">Elle</span>
+              <br />
+              Hazırlanan Taze Buketler
+            </h1>
+            <p className="max-w-sm text-lg leading-relaxed text-muted-foreground">
+              Talas&apos;taki atölyemizden sevdiklerinize özel buketler, saksı
+              çiçekleri ve yapay çiçek düzenlemeleri hazırlıyoruz.
+            </p>
+            <HeroCta />
+          </div>
+        </Reveal>
+      </div>
+
+      {/* Mobil ve tablet: ayrı, alt alta düzen */}
+      <div className="lg:hidden">
+        <Reveal className="relative h-[300px] w-full sm:h-[380px]">
+          <Image
+            src={HERO_IMAGE}
+            alt={HERO_ALT}
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-[58%_35%]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background" />
+        </Reveal>
+
+        <Reveal
+          delay={0.1}
+          className="flex flex-col gap-5 px-4 pb-14 pt-6 sm:px-6"
+        >
+          <h1 className="font-display text-4xl font-semibold leading-[1.1] tracking-tight text-foreground">
+            Her Gün <span className="font-normal italic text-accent-text">Elle</span>{" "}
+            Hazırlanan Taze Buketler
+          </h1>
+          <p className="max-w-sm text-base leading-relaxed text-muted-foreground">
+            Talas&apos;taki atölyemizden sevdiklerinize özel buketler, saksı
+            çiçekleri ve yapay çiçek düzenlemeleri hazırlıyoruz.
+          </p>
+          <HeroCta />
+        </Reveal>
+      </div>
     </section>
   );
 }
