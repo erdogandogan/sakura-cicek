@@ -28,7 +28,7 @@ export function CyclingWord({
 
   return (
     <span
-      className={`relative inline-block h-[1.5em] overflow-hidden align-bottom ${widthClassName} ${className}`}
+      className={`relative inline-block h-[1.5em] overflow-y-hidden overflow-x-visible align-bottom ${widthClassName} ${className}`}
     >
       {words.map((word, i) => {
         // Her gecis ayni yonde (asagi) olsun diye "az once cikan kelime"

@@ -26,7 +26,7 @@ export default async function UrunlerPage({
     <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
       <div className="mb-10 max-w-xl">
         <h1 className="font-display text-4xl font-semibold text-foreground md:text-5xl">
-          Ürünler
+          Ürünlerimiz
         </h1>
         <p className="mt-3 text-base leading-relaxed text-muted-foreground">
           Taze buketlerden saksı çiçeklerine, solmayan yapay düzenlemelere

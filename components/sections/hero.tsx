@@ -31,7 +31,7 @@ function HeroCta() {
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-background">
-      <div className="hero-media-frame relative flex items-start pt-8 sm:pt-10 lg:pt-14">
+      <div className="hero-media-frame relative flex items-center">
         <div className="pointer-events-none absolute inset-y-0 right-0 z-20 w-[54%] sm:w-[56%] lg:w-[62%] xl:w-[58%]">
           <Image
             src={HERO_IMAGE}
@@ -39,21 +39,21 @@ export default function Hero() {
             fill
             priority
             sizes="(max-width: 1024px) 48vw, 48vw"
-            className="object-contain object-right"
+            className="object-contain object-right-top"
           />
         </div>
 
         <Reveal className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="flex max-w-[80%] flex-col text-foreground sm:max-w-xl lg:max-w-2xl xl:max-w-3xl">
-            <span className="font-display text-3xl font-semibold leading-tight tracking-tight sm:text-6xl lg:text-7xl xl:text-8xl">
+            <span className="font-display text-4xl font-semibold leading-tight tracking-tight sm:text-7xl lg:text-8xl xl:text-9xl">
               Her Gün
             </span>
             <CyclingWord
               words={HEADLINE_WORDS}
               className="font-script text-6xl leading-tight text-accent-text sm:text-8xl lg:text-9xl"
-              widthClassName="w-[5ch] sm:w-[6ch] xl:w-[7ch]"
+              widthClassName="w-[6ch] sm:w-[7ch] xl:w-[8ch]"
             />
-            <span className="font-display text-xl font-medium leading-tight tracking-tight sm:text-3xl lg:text-4xl xl:text-5xl">
+            <span className="font-display text-2xl font-medium leading-tight tracking-tight sm:text-4xl lg:text-5xl xl:text-[3.5rem]">
               Taze Hazırlanan
             </span>
             <span className="font-display text-4xl font-semibold leading-tight tracking-tight sm:text-7xl lg:text-8xl xl:text-[9rem]">
