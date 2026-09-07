@@ -34,7 +34,7 @@ export default function HoursBadge({ className = "" }: HoursBadgeProps) {
   return (
     <div className={`flex items-center gap-2 text-sm text-foreground ${className}`}>
       <span
-        className={`h-2 w-2 shrink-0 rounded-none ${
+        className={`h-2 w-2 shrink-0 rounded-full ${
           mounted && open ? "bg-accent-secondary" : "bg-muted-foreground"
         }`}
       />

@@ -1,59 +1,39 @@
-import { MagnifyingGlass, WhatsappLogo, ChatCircleDots } from "@phosphor-icons/react/dist/ssr";
 import { Reveal } from "@/components/reveal";
+import { FeatureSteps } from "@/components/ui/feature-steps";
 
-const steps = [
+const orderSteps = [
   {
-    number: "01",
-    icon: MagnifyingGlass,
+    step: "Adım 1",
     title: "Ürünü Seç",
-    description: "Ürünler sayfasından beğendiğin buketi veya çiçeği seç.",
+    content: "Ürünler sayfasından beğendiğin buketi veya çiçeği seç.",
+    image: "/images/instagram/buket-beyaz-krem.jpg",
   },
   {
-    number: "02",
-    icon: WhatsappLogo,
+    step: "Adım 2",
     title: "WhatsApp'tan Yaz",
-    description: "Seçtiğin ürünü tek dokunuşla WhatsApp üzerinden bize ilet.",
+    content: "Seçtiğin ürünü tek dokunuşla WhatsApp üzerinden bize ilet.",
+    image: "/images/instagram/orkide-turuncu-saksi.jpg",
   },
   {
-    number: "03",
-    icon: ChatCircleDots,
+    step: "Adım 3",
     title: "Detayları Konuşalım",
-    description: "Teslimat veya atölyeden teslim alma seçeneklerini birlikte planlayalım.",
+    content:
+      "Teslimat veya atölyeden teslim alma seçeneklerini birlikte planlayalım.",
+    image: "/images/instagram/aranjman-krem-altin-vazo.jpg",
   },
 ];
 
 export default function HowToOrder() {
   return (
-    <section className="bg-surface py-20">
+    <section className="py-14">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <Reveal className="mb-12 max-w-xl">
-          <h2 className="font-display text-3xl font-semibold text-foreground md:text-4xl">
-            Nasıl Sipariş Verilir
-          </h2>
+        <Reveal>
+          <FeatureSteps
+            features={orderSteps}
+            title="Nasıl Sipariş Verilir"
+            autoPlayInterval={3500}
+          />
         </Reveal>
-
-        <div className="grid gap-6 md:grid-cols-3">
-          {steps.map((step, i) => (
-            <Reveal
-              key={step.title}
-              delay={i * 0.1}
-              className="relative flex flex-col gap-4 bg-background p-8"
-            >
-              <span className="font-display text-6xl font-semibold leading-none text-accent-soft">
-                {step.number}
-              </span>
-              <div className="flex h-14 w-14 items-center justify-center bg-accent-soft">
-                <step.icon size={30} weight="light" className="text-accent-secondary" />
-              </div>
-              <h3 className="font-display text-2xl font-semibold text-foreground">
-                {step.title}
-              </h3>
-              <p className="text-base leading-relaxed text-muted-foreground">
-                {step.description}
-              </p>
-            </Reveal>
-          ))}
-        </div>
       </div>
     </section>
   );
