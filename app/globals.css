@@ -52,18 +52,18 @@ h1, h2, h3, h4 {
 }
 
 .hero-media-frame {
-  min-height: 420px;
+  min-height: 620px;
 }
 
 @media (min-width: 640px) {
   .hero-media-frame {
-    min-height: 560px;
+    min-height: 760px;
   }
 }
 
 @media (min-width: 1024px) {
   .hero-media-frame {
-    min-height: 1160px;
+    min-height: 1280px;
   }
 }
 

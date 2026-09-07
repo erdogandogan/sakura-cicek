@@ -32,7 +32,7 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-background">
       <div className="hero-media-frame relative flex items-center">
-        <div className="pointer-events-none absolute inset-y-0 right-0 z-20 w-[54%] sm:w-[56%] lg:w-[62%] xl:w-[58%]">
+        <div className="pointer-events-none absolute inset-y-0 -right-6 z-20 w-[54%] sm:-right-10 sm:w-[56%] lg:-right-14 lg:w-[62%] xl:-right-16 xl:w-[58%]">
           <Image
             src={HERO_IMAGE}
             alt={HERO_ALT}
@@ -43,38 +43,41 @@ export default function Hero() {
           />
         </div>
 
-        <Reveal className="relative z-10 -mt-10 mx-auto w-full max-w-7xl px-4 py-6 sm:-mt-14 sm:px-6 lg:-mt-20 lg:px-8 lg:py-10">
-          <h1 className="flex max-w-[80%] flex-col gap-1 text-foreground sm:max-w-xl lg:max-w-2xl xl:max-w-3xl">
-            <span className="font-display text-5xl font-semibold leading-tight tracking-tight sm:text-8xl lg:text-9xl xl:text-[10rem]">
-              Her Gün
-            </span>
-            <CyclingWord
-              words={HEADLINE_WORDS}
-              className="font-script text-7xl leading-tight text-accent-text sm:text-9xl lg:text-[10rem]"
-              widthClassName="w-[7ch] sm:w-[8ch] xl:w-[9ch]"
-            />
-            <span className="font-display text-3xl font-medium leading-tight tracking-tight sm:text-5xl lg:text-6xl xl:text-[4.25rem]">
-              Taze Hazırlanan
-            </span>
-            <span className="font-display text-5xl font-semibold leading-tight tracking-tight sm:text-8xl lg:text-9xl xl:text-[10.5rem]">
-              Buketler
-            </span>
-          </h1>
-        </Reveal>
-      </div>
+        {/* Baslik + alt metin + CTA'lar artik AYNI blok icinde: aralarindaki
+            bosluk her zaman kucuk/dogal kaliyor, cerceve yuksekligi veya
+            basligin yukari kaydirilma miktari degisse bile birbirinden
+            kopmuyor. */}
+        <div className="relative z-10 mx-auto w-full max-w-7xl px-4 py-6 sm:-mt-8 sm:px-6 lg:-mt-48 lg:px-8 lg:py-10">
+          <Reveal>
+            <h1 className="flex max-w-[80%] flex-col gap-1 text-foreground sm:max-w-xl lg:max-w-2xl xl:max-w-3xl">
+              <span className="font-display text-5xl font-semibold leading-tight tracking-tight sm:text-8xl lg:text-9xl xl:text-[10rem]">
+                Her Gün
+              </span>
+              <CyclingWord
+                words={HEADLINE_WORDS}
+                className="font-script text-7xl leading-tight text-accent-text sm:text-9xl lg:text-[10rem]"
+                widthClassName="w-[7ch] sm:w-[8ch] xl:w-[9ch]"
+              />
+              <span className="font-display text-3xl font-medium leading-tight tracking-tight sm:text-5xl lg:text-6xl xl:text-[4.25rem]">
+                Taze Hazırlanan
+              </span>
+              <span className="font-display text-5xl font-semibold leading-tight tracking-tight sm:text-8xl lg:text-9xl xl:text-[10.5rem]">
+                Buketler
+              </span>
+            </h1>
+          </Reveal>
 
-      <Reveal
-        delay={0.1}
-        className="relative z-10 -mt-6 mx-auto w-full max-w-7xl px-4 pb-10 sm:px-6 lg:-mt-16 lg:px-8 lg:pb-14"
-      >
-        <div className="flex max-w-xl flex-col gap-5">
-          <p className="text-sm leading-relaxed text-muted-foreground sm:text-base lg:text-lg">
-            Talas&apos;taki atölyemizden sevdiklerinize özel buketler, saksı
-            çiçekleri ve yapay çiçek düzenlemeleri hazırlıyoruz.
-          </p>
-          <HeroCta />
+          <Reveal delay={0.1} className="mt-6 lg:mt-10">
+            <div className="flex max-w-[80%] flex-col gap-5 sm:max-w-xl">
+              <p className="text-sm leading-relaxed text-muted-foreground sm:text-base lg:text-lg">
+                Talas&apos;taki atölyemizden sevdiklerinize özel buketler,
+                saksı çiçekleri ve yapay çiçek düzenlemeleri hazırlıyoruz.
+              </p>
+              <HeroCta />
+            </div>
+          </Reveal>
         </div>
-      </Reveal>
+      </div>
     </section>
   );
 }
