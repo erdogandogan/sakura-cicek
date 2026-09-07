@@ -8,11 +8,11 @@ export default function StoryTeaser() {
       <div className="mx-auto grid max-w-7xl items-stretch gap-0 sm:px-6 lg:grid-cols-2 lg:px-8">
         <Reveal className="relative min-h-[280px] w-full lg:min-h-[420px]">
           <Image
-            src="/images/instagram/buket-beyaz-mor-zambak.jpg"
-            alt="Sakura Çiçek Atölyesi'nde hazırlanan beyaz ve mor zambaklı bir buket"
+            src="/images/story-flowers.webp"
+            alt="Sakura Çiçek Atölyesi'nde hazırlanan pembe şakayık ve lale buketi"
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"
-            className="object-cover lg:rounded-panel"
+            className="object-cover"
           />
         </Reveal>
 
@@ -23,10 +23,6 @@ export default function StoryTeaser() {
           <h2 className="font-display text-3xl font-semibold text-foreground md:text-4xl">
             Küçük Bir Atölyeden, Büyük Bir Özenle
           </h2>
-          <p className="max-w-md text-base leading-relaxed text-muted-foreground">
-            Sakura Çiçek Atölyesi, Talas&apos;ta küçük bir dükkanda başladı.
-            Bugün de her buketi aynı titizlikle, elle hazırlıyoruz.
-          </p>
           <Link
             href="/hakkimizda"
             className="text-sm font-semibold text-accent-text hover:underline"
