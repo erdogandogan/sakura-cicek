@@ -26,8 +26,8 @@ export default function IconLinkButton({
   iconOnly = false,
 }: IconLinkButtonProps) {
   const base = iconOnly
-    ? "inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97]"
-    : "inline-flex min-h-11 items-center justify-center gap-1.5 whitespace-nowrap rounded-full px-4 py-3 text-sm font-semibold transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97]";
+    ? "inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-none transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97]"
+    : "inline-flex min-h-11 items-center justify-center gap-1.5 whitespace-nowrap rounded-none px-4 py-3 text-sm font-semibold transition-transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97]";
   const variantStyles = {
     primary: "bg-accent text-accent-foreground hover:brightness-105",
     secondary:

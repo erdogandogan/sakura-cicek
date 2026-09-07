@@ -36,7 +36,7 @@ export default function ProductCatalog({
             key={tab.value}
             type="button"
             onClick={() => setActive(tab.value)}
-            className={`min-h-11 rounded-full border px-4 py-2 text-sm font-semibold transition-colors ${
+            className={`min-h-11 rounded-none border px-4 py-2 text-sm font-semibold transition-colors ${
               active === tab.value
                 ? "border-accent bg-accent text-accent-foreground"
                 : "border-border bg-transparent text-foreground hover:border-accent-text hover:text-accent-text"

@@ -26,7 +26,7 @@
   --color-accent-secondary: var(--accent-secondary);
   --font-display: var(--font-cormorant);
   --font-body: var(--font-manrope);
-  --radius-panel: 1.25rem;
+  --radius-panel: 0;
 }
 
 body {

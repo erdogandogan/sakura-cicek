@@ -24,7 +24,7 @@ export default function HoursStatus() {
   return (
     <div className="flex max-w-sm flex-col gap-4">
       <div
-        className={`inline-flex w-fit items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold ${
+        className={`inline-flex w-fit items-center gap-2 rounded-none border px-4 py-2 text-sm font-semibold ${
           mounted && open
             ? "border-accent-secondary/30 bg-accent-secondary/10 text-accent-secondary"
             : "border-border bg-surface text-muted-foreground"
@@ -32,10 +32,10 @@ export default function HoursStatus() {
       >
         <span className="relative flex h-2.5 w-2.5">
           {mounted && open && (
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent-secondary opacity-75" />
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-none bg-accent-secondary opacity-75" />
           )}
           <span
-            className={`relative inline-flex h-2.5 w-2.5 rounded-full ${
+            className={`relative inline-flex h-2.5 w-2.5 rounded-none ${
               mounted && open ? "bg-accent-secondary" : "bg-muted-foreground"
             }`}
           />
@@ -50,7 +50,7 @@ export default function HoursStatus() {
           return (
             <div
               key={h.day}
-              className={`flex items-center justify-between rounded-lg px-3 py-2 text-sm ${
+              className={`flex items-center justify-between rounded-none px-3 py-2 text-sm ${
                 isToday ? "bg-accent-soft" : ""
               } ${isClosed && !isToday ? "opacity-60" : ""}`}
             >

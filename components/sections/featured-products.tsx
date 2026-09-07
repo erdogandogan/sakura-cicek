@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { products } from "@/data/products";
 import { Reveal } from "@/components/reveal";
-import { Marquee } from "@/components/ui/marquee";
+import { AutoScrollRow } from "@/components/ui/auto-scroll-row";
 import { getWhatsAppLink } from "@/lib/whatsapp";
 
 const featuredIds = [
@@ -39,32 +39,37 @@ export default function FeaturedProducts() {
       </div>
 
       <Reveal delay={0.1} className="mt-10">
-        <Marquee speed="slow" itemClassName="w-40 sm:w-52">
+        <AutoScrollRow
+          itemClassName="w-56 sm:w-64 md:w-72"
+          className="cursor-grab px-4 py-2 [mask-image:linear-gradient(to_right,transparent,white_3%,white_97%,transparent)] active:cursor-grabbing sm:px-6 lg:px-8"
+        >
           {featured.map((product, i) => (
             <a
               key={product.id}
               href={getWhatsAppLink(product.name)}
               target="_blank"
               rel="noopener noreferrer"
-              className={`group block rounded-panel p-3 transition-transform duration-300 hover:-translate-y-1 hover:rotate-0 ${
+              draggable={false}
+              className={`group block select-none p-3 transition-transform duration-300 hover:-translate-y-1 hover:rotate-0 ${
                 backdrops[i % backdrops.length]
               } ${tilts[i % tilts.length]}`}
             >
-              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-panel">
+              <div className="relative aspect-[4/5] w-full overflow-hidden">
                 <Image
                   src={product.image as string}
                   alt={product.name}
                   fill
-                  sizes="(max-width: 640px) 40vw, 200px"
+                  draggable={false}
+                  sizes="(max-width: 640px) 60vw, 300px"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
-              <span className="mt-3 block text-center text-sm font-medium text-foreground">
+              <span className="mt-3 block text-center text-base font-medium text-foreground">
                 {product.name}
               </span>
             </a>
           ))}
-        </Marquee>
+        </AutoScrollRow>
       </Reveal>
 
       <Link

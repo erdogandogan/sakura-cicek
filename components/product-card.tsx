@@ -27,7 +27,7 @@ export default function ProductCard({ product }: { product: Product }) {
             </span>
           </div>
         )}
-        <span className="absolute left-3 top-3 rounded-full bg-background/90 px-3 py-1 text-xs font-medium text-muted-foreground backdrop-blur-sm">
+        <span className="absolute left-3 top-3 rounded-none bg-background/90 px-3 py-1 text-xs font-medium text-muted-foreground backdrop-blur-sm">
           {categoryLabels[product.category]}
         </span>
       </div>

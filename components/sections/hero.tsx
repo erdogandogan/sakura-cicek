@@ -23,7 +23,7 @@ export default function Hero() {
           <InstagramButton variant="soft" />
           <Link
             href="/urunler"
-            className="inline-flex min-h-11 items-center justify-center rounded-full border border-border px-5 py-3 text-sm font-semibold text-foreground transition-transform hover:-translate-y-0.5 hover:border-accent-text hover:text-accent-text active:translate-y-0"
+            className="inline-flex min-h-11 items-center justify-center rounded-none border border-border px-5 py-3 text-sm font-semibold text-foreground transition-transform hover:-translate-y-0.5 hover:border-accent-text hover:text-accent-text active:translate-y-0"
           >
             Ürünleri Gör
           </Link>

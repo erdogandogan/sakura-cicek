@@ -67,7 +67,7 @@ export default function Nav() {
           type="button"
           aria-label={open ? "Menüyü kapat" : "Menüyü aç"}
           onClick={() => setOpen((v) => !v)}
-          className="flex h-11 w-11 items-center justify-center rounded-full text-foreground lg:hidden"
+          className="flex h-11 w-11 items-center justify-center rounded-none text-foreground lg:hidden"
         >
           {open ? <X size={24} /> : <List size={24} />}
         </button>
@@ -81,7 +81,7 @@ export default function Nav() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className={`rounded-lg px-3 py-3 text-base font-medium ${
+                className={`rounded-none px-3 py-3 text-base font-medium ${
                   pathname === link.href
                     ? "bg-accent-soft text-accent-text"
                     : "text-foreground"
