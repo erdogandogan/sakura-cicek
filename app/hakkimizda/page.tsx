@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Quotes } from "@phosphor-icons/react/dist/ssr";
 import EditorialSplit from "@/components/editorial-split";
+import HowWePrepare from "@/components/sections/how-we-prepare";
 import ClosingCta from "@/components/sections/closing-cta";
 import { Reveal } from "@/components/reveal";
 
@@ -40,6 +41,8 @@ export default function HakkimizdaPage() {
         heading="Atölye Felsefemiz"
         body="Her buketi, o günün taze çiçekleriyle elde hazırlıyoruz. Seri üretim yerine, her siparişe ayrı zaman ayırmayı tercih ediyoruz."
       />
+
+      <HowWePrepare />
 
       <section className="bg-surface py-16">
         <Reveal className="mx-auto flex max-w-2xl flex-col items-center gap-5 px-4 text-center sm:px-6 lg:px-8">

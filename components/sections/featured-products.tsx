@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { products } from "@/data/products";
 import { Reveal } from "@/components/reveal";
+import { Marquee } from "@/components/ui/marquee";
 import { getWhatsAppLink } from "@/lib/whatsapp";
 
 const featuredIds = [
@@ -15,7 +16,6 @@ const featuredIds = [
 
 const backdrops = ["bg-accent-soft", "bg-surface", "bg-accent-secondary/10"];
 const tilts = ["-rotate-2", "rotate-1", "-rotate-1", "rotate-2", "-rotate-1", "rotate-2"];
-const stagger = ["", "sm:mt-8", "sm:mt-2", "sm:mt-10", "sm:mt-4", "sm:mt-1"];
 
 export default function FeaturedProducts() {
   const featured = featuredIds
@@ -38,14 +38,11 @@ export default function FeaturedProducts() {
         </Link>
       </div>
 
-      <div className="mx-auto mt-12 grid max-w-7xl grid-cols-2 gap-5 px-4 sm:grid-cols-3 sm:gap-6 sm:px-6 lg:grid-cols-6 lg:px-8">
-        {featured.map((product, i) => (
-          <Reveal
-            key={product.id}
-            delay={i * 0.06}
-            className={stagger[i % stagger.length]}
-          >
+      <Reveal delay={0.1} className="mt-10">
+        <Marquee speed="slow" itemClassName="w-40 sm:w-52">
+          {featured.map((product, i) => (
             <a
+              key={product.id}
               href={getWhatsAppLink(product.name)}
               target="_blank"
               rel="noopener noreferrer"
@@ -58,7 +55,7 @@ export default function FeaturedProducts() {
                   src={product.image as string}
                   alt={product.name}
                   fill
-                  sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 15vw"
+                  sizes="(max-width: 640px) 40vw, 200px"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
@@ -66,9 +63,16 @@ export default function FeaturedProducts() {
                 {product.name}
               </span>
             </a>
-          </Reveal>
-        ))}
-      </div>
+          ))}
+        </Marquee>
+      </Reveal>
+
+      <Link
+        href="/urunler"
+        className="mt-6 block text-center text-sm font-semibold text-accent-text hover:underline sm:hidden"
+      >
+        Tüm ürünleri gör
+      </Link>
     </section>
   );
 }
