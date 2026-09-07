@@ -1,13 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import Image from "next/image";
 
 export interface FeatureStep {
   step: string;
   title?: string;
-  content: string;
+  icon: ReactNode;
   image: string;
 }
 
@@ -51,28 +51,23 @@ export function FeatureSteps({
           {features.map((feature, index) => (
             <motion.div
               key={index}
-              className="flex items-start gap-4"
+              className="flex items-center gap-4"
               initial={false}
               animate={{ opacity: index === currentFeature ? 1 : 0.45 }}
               transition={{ duration: 0.4 }}
             >
               <span
-                className={`flex h-9 w-9 shrink-0 items-center justify-center border text-sm font-semibold ${
+                className={`flex h-11 w-11 shrink-0 items-center justify-center border transition-colors duration-300 ${
                   index === currentFeature
                     ? "border-accent bg-accent text-accent-foreground"
                     : "border-border bg-surface text-muted-foreground"
                 }`}
               >
-                {index < currentFeature ? "✓" : index + 1}
+                {feature.icon}
               </span>
-              <div>
-                <h3 className="font-display text-lg font-semibold text-foreground">
-                  {feature.title || feature.step}
-                </h3>
-                <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
-                  {feature.content}
-                </p>
-              </div>
+              <h3 className="font-display text-lg font-semibold text-foreground">
+                {feature.title || feature.step}
+              </h3>
             </motion.div>
           ))}
         </div>

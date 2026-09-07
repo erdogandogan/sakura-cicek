@@ -10,9 +10,9 @@ const HERO_ALT =
 
 function HeroCta() {
   return (
-    <div className="flex flex-wrap gap-3">
+    <div className="flex flex-nowrap items-center justify-center gap-2 sm:gap-3">
       <WhatsAppButton
-        label="WhatsApp'tan Yaz"
+        label="WhatsApp"
         className="shadow-lg shadow-accent/40"
       />
       <InstagramButton variant="soft" />
@@ -20,7 +20,7 @@ function HeroCta() {
         href="/urunler"
         className="inline-flex min-h-11 items-center justify-center border border-border px-5 py-3 text-sm font-semibold text-foreground transition-transform hover:-translate-y-0.5 hover:border-accent-text hover:text-accent-text active:translate-y-0"
       >
-        Ürünleri Gör
+        Ürünlerimiz
       </Link>
     </div>
   );

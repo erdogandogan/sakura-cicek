@@ -15,8 +15,8 @@ export default function Home() {
       <Categories />
       <FeaturedProducts />
       <HowToOrder />
-      <StoryTeaser />
       <AtelierGallery />
+      <StoryTeaser />
       <Testimonial />
       <VisitInfo />
       <ClosingCta />

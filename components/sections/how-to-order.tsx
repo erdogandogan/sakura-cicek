@@ -1,3 +1,4 @@
+import { MagnifyingGlass, WhatsappLogo, ChatCircleDots } from "@phosphor-icons/react/dist/ssr";
 import { Reveal } from "@/components/reveal";
 import { FeatureSteps } from "@/components/ui/feature-steps";
 
@@ -5,20 +6,19 @@ const orderSteps = [
   {
     step: "Adım 1",
     title: "Ürünü Seç",
-    content: "Ürünler sayfasından beğendiğin buketi veya çiçeği seç.",
+    icon: <MagnifyingGlass size={20} weight="light" />,
     image: "/images/instagram/buket-beyaz-krem.jpg",
   },
   {
     step: "Adım 2",
     title: "WhatsApp'tan Yaz",
-    content: "Seçtiğin ürünü tek dokunuşla WhatsApp üzerinden bize ilet.",
+    icon: <WhatsappLogo size={20} weight="light" />,
     image: "/images/instagram/orkide-turuncu-saksi.jpg",
   },
   {
     step: "Adım 3",
     title: "Detayları Konuşalım",
-    content:
-      "Teslimat veya atölyeden teslim alma seçeneklerini birlikte planlayalım.",
+    icon: <ChatCircleDots size={20} weight="light" />,
     image: "/images/instagram/aranjman-krem-altin-vazo.jpg",
   },
 ];
