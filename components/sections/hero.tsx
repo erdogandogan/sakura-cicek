@@ -45,8 +45,12 @@ export default function Hero() {
 
         {/* Baslik + alt metin + CTA'lar ayni blok icinde: aralarindaki
             bosluk sabit/kucuk kaliyor, ayri negatif margin'lerin
-            senkronsuz kalip asiri bosluk birakmasini onluyor. */}
-        <div className="relative z-10 -mt-10 mx-auto w-full max-w-7xl px-4 py-6 sm:-mt-14 sm:px-6 lg:-mt-20 lg:px-8 lg:py-10">
+            senkronsuz kalip asiri bosluk birakmasini onluyor. Bu blogun
+            kendi -mt degeri yok: hero-media-frame'in items-center'i ile
+            dogal olarak ortalaniyor (eski basligi yukari kaydiran -mt
+            degeri, zamanla paragraftan kopup asiri bosluga sebep oldugu
+            icin kaldirildi). */}
+        <div className="relative z-10 mx-auto w-full max-w-7xl px-4 py-6 sm:px-6 lg:px-8 lg:py-10">
           <Reveal>
             <h1 className="flex max-w-[80%] flex-col gap-1 text-foreground sm:max-w-xl lg:max-w-2xl xl:max-w-3xl">
               <span className="font-display text-5xl font-semibold leading-tight tracking-tight sm:text-8xl lg:text-9xl xl:text-[10rem]">
@@ -66,7 +70,7 @@ export default function Hero() {
             </h1>
           </Reveal>
 
-          <Reveal delay={0.1} className="mt-8 lg:mt-14">
+          <Reveal delay={0.1} className="mt-6 lg:mt-10">
             <div className="flex max-w-[80%] flex-col gap-5 sm:max-w-xl">
               <p className="text-sm leading-relaxed text-muted-foreground sm:text-base lg:text-lg">
                 Talas&apos;taki atölyemizden sevdiklerinize özel buketler,
